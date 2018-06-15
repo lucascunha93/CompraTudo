@@ -1,0 +1,207 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Navbar */
+
+.navbar-inverse {
+    background-color: rgb(235, 233, 233);
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px 1.5px rgba(109, 109, 109, 0.692);
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
+    color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+    background-color: rgba(0, 0, 0, 0.822);
+}
+
+nav .active {
+    background-color: rgba(0, 97, 24, 0.548);
+    color: white;
+    border-bottom: 3px solid rgb(0, 100, 33);
+}
+
+
+/* Carousel */
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    height: 80vh;
+    max-height: 600px;
+}
+
+.carousel-caption {
+    margin: 0;
+    padding: 0;
+    margin-bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
+.carousel-caption > p {
+    margin: 5px 0 5px 10px;
+}
+
+.carousel-indicators {
+    top: 10px;
+}
+
+.carousel-indicators > li {
+    background-color: black;
+}
+
+/* Conteudo Home-reputação */
+
+.reputacao-area {
+    padding: 50px 0 50px;
+    margin-top: 50px;
+    background-color: rgb(235, 233, 233);
+}
+
+.reputacao-container {
+    padding: 0 100px 0 100px;
+}
+
+.rep-conteudo {
+    padding: 20px 10px;
+    text-align: center;
+    
+}
+
+.rep-conteudo > i {
+    font-size: 50px;
+    color: white;
+}
+
+.rep-conteudo > p {
+    color: white;
+}
+
+
+.rep-devolucao {
+    background-color: rgb(0, 89, 255);
+}
+
+.rep-seguro {
+    background-color: rgb(0, 255, 13);
+}
+
+.rep-entrega-rapida {
+    background-color: rgb(0, 255, 170);
+}
+
+.rep-satisfacao {
+    background-color: rgb(255, 0, 128);
+}
+
+.rep-devolucao, .rep-entrega-rapida, .rep-satisfacao, .rep-seguro {
+    height: 100px;
+}
+
+/* Conteudo Home-ofertas */
+
+.ofertas-dia {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.produto-promo {
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid rgba(97, 97, 97, 0.514);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.418);
+}
+
+.img-produto {
+    width: 100%;
+}
+
+.produto-promo > h2 > a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.produto-promo > h2 > a:hover {
+    color: rgba(0, 166, 172, 0.514);
+}
+
+/* Footer */
+
+.footer-area {
+    width: 100%;
+    height: 180px;
+    background-color: rebeccapurple;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-area > 
+
+.footer-info > h2 {
+    font-size: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+.redes-sociais {
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.fa-facebook {
+    color: blue;
+}
+
+.fa-linkedin {
+    color: blue;
+}
+
+.fa-github-square {
+    color: black;
+}
+
+.fa-facebook:hover, .fa-linkedin:hover, .fa-github-square:hover {
+    color: white;
+}
+
+
+/* Media Queries */
+
+/* Telefones em paisagem e abaixo */
+@media (max-width: 480px) { 
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (min-width: 480px) and (max-width: 767px) {
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+        height: 400px;
+        width: 100%;
+    }
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) {
+    .carousel-inner {
+        height: 80vh;
+        min-height: 450px;
+    }
+    .item > img {
+        width: 100%;
+        min-height: 450px;
+    }
+
+}
