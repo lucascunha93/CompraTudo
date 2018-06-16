@@ -82,7 +82,7 @@
 
     <h2>Ofertas do dia</h2>
 
-    <div class="col-md-2 produto-promo">
+    <div class="col-md-2 col-md-offset-1 produto-promo">
         <div class="img-produto">
             <img src="assets/img/produtos/1.jpg" alt="">
         </div>
@@ -93,31 +93,15 @@
         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Adicionar</a>
             <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Mais detalhes</a>
     </div>
-</div>
-
-<!-- Footer -->
-
-<div class="col-md-12 footer-area">
-    <div class="col-md-3 col-md-offset-1 footer-info">
-        <h2>CompraTudo</h2>
-        <p>Uma rede Ecommerce especializada em vendas de celular,
-            pelo melhor preço e condições.
-        </p>
-    </div>
-    <div class="col-md-3 col-md-offset-1 footer-info">
-        <h2>Dev by Lucas Cunha</h2>
-        <div class="col-md-2 col-md-offset-1 redes-sociais">
-            <a href="www.facebook.com" class="fab fa-facebook"></a>
+    <div class="col-md-2 col-md-offset-1 produto-promo">
+        <div class="img-produto">
+            <img src="assets/img/produtos/1.jpg" alt="">
         </div>
-        <div class="col-md-2 col-md-offset-2 redes-sociais">
-        <a href="www.linkedin.com" class="fab fa-fab fa-linkedin"></a>
+        <h2><a href="single-product.html">Samsung Galaxy S5</a></h2> 
+        <div class="product-carousel-price">
+            <p>R$700.00</p>
         </div>
-        <div class="col-md-2 col-md-offset-2 redes-sociais">
-            <a href="www.github.com" class="fab fa-github-square"></a>
-        </div>
-    </div>
-    <div class="col-md-3 col-md-offset-1 footer-info">
-        <h2>Loren ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in viverra risus. Cras non semper nulla. Proin scelerisque dolor nisi, at gravida mi consequat in. Nam ac felis nisl. Fusce rutrum, leo eu vulputate porta.</p>
+        <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Adicionar</a>
+            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Mais detalhes</a>
     </div>
 </div>

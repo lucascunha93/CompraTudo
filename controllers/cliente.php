@@ -10,8 +10,8 @@ class clienteController {
 
     public function index(){
         require_once("views/cliente/header.php");
-        require_once("views/cliente/home.php");
-        require_once("views/cliente/footer.php");
+        require_once("views/main/home.php");
+        require_once("views/main/footer.php");
     }
 
     public function listaProdutos(){

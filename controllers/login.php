@@ -20,7 +20,13 @@
                     $_SESSION['idUser'] = $line['id'];
                     $_SESSION['User'] = $line['email'];
                     $_SESSION['nome'] = $line['nome'];
+                    
+                    if ($line['admin'] = '1') {
+                        header("location: index.php?c=a&a=i");
+                    }
+                    else {
                     header("location: index.php?c=c&a=i");
+                    }
                  }
                  else{
                      header("location: index.php?c=m&a=cc");

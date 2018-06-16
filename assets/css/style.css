@@ -28,6 +28,7 @@ nav .active {
     border-bottom: 3px solid rgb(0, 100, 33);
 }
 
+/* ----Página Home---- */
 
 /* Carousel */
 
@@ -133,6 +134,30 @@ nav .active {
 
 .produto-promo > h2 > a:hover {
     color: rgba(0, 166, 172, 0.514);
+}
+
+/* ---Página Produtos--- */
+
+/* Banner */
+
+.banner-produto {
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.banner-letreiro {
+    padding: 50px 0;
+}
+
+/* Página do administrador */
+
+.addproduto-area {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-addproduto {
+    text-align: left
 }
 
 /* Footer */

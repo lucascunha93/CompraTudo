@@ -42,8 +42,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="fas fa-shopping-cart"></span>Carrinho </a></li>
-        <li><a href="?c=l&a=cc"><span class="fas fa-user-plus"></span> Cadastrar-se </a></li>
-        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="fas fa-sign-in-alt"></span> Entrar </a></li>
+        <li><a href="?c=l&a=cc"><span class="fas fa-user-plus"></span>Bem-vindo, <?=$_SESSION['nome']?></a></li>
+        <li><a href="?c=l&a=off"><span class="fas fa-sign-out-alt"></span> Sair </a></li>
       </ul>
     </div>
   </div>

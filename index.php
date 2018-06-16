@@ -23,13 +23,13 @@ session_start();
                         case 'i': $main -> index(); break; // pagina inicial
                         case 'p': $main -> produtos(); break; // pagina lista de produtos
                         case 'cc': $main -> cadastroCliente(); break; // pagina de cadastro de clientes
-                        case 'ccl': $user -> cadastrarCliente(); break; // metodo para inserir os dados do cliente no BD
+                        case 'ccl': $main -> cadastrarCliente(); break; // metodo para inserir os dados do cliente no BD
                     }
                 }
             break;
 
-            case 'u': // controler user
-            require_once('controllers/user.php');
+            case 'l': // controler login
+            require_once('controllers/login.php');
             $user = new userController();
 
             if (!isset($_GET['a'])) {
@@ -61,6 +61,20 @@ session_start();
                     }
                 }
             break;
+            case 'a': // controller admin
+                require_once("controllers/admin.php");
+                $admin = new adminController();
+
+                if (!isset($_GET['a'])) {
+                    $admin -> index();
+                }
+                else {
+                    switch ($_REQUEST['a']) {
+                        case 'i': $admin -> index(); break; // pagina inicial do administrador 
+                        case 'ap': $admin -> adiciona_produto(); break; // pagina inicial do cliente logado
+                        case 'add': $admin -> add_produto(); break; // pagina inicial do cliente logado
+                    }
+                }
         }
     }
 ?>

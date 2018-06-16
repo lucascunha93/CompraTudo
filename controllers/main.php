@@ -3,6 +3,7 @@ class mainController {
 
     function __construct() {
         require_once ("models/produtosModel.php");
+        require_once ("models/clientesModel.php");
     }
 
     public function index() {
@@ -14,7 +15,7 @@ class mainController {
     public function produtos() {
         $produto = new produtosModel();
         $produto -> listaProdutos();
-        $produtoResultado = $produto -> mostrarLista();
+        $produtoResultado = $produto -> mostrarResultado();
 
         $arrayProdutos = array();
 
@@ -29,7 +30,7 @@ class mainController {
 
     public function cadastroCliente() {
         require_once("views/main/header.php");
-        require_once("views/main/cadastroCliente.php");
+        require_once("views/main/cadastro/cadastro.php");
         require_once("views/main/footer.php");
     }
 
