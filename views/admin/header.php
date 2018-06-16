@@ -37,13 +37,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="?c=m&a=i" class="active" >Página Inicial</a></li>
-        <li><a href="?c=m&a=p" >Produtos</a></li>
+        <li><a href="?c=a&a=i" class="active" >Página Inicial</a></li>
+        <li><a href="?c=a&a=pa" >Produtos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="?c=a&a=aa"><span class="fas fa-user-plus"></span>Adicionar administrador </a></li>
         <li><a href="?c=a&a=ap"><span class="fas fa-plus"></span>Adicionar produto </a></li>
-        <li><a href="?c=l&a=cc"><span ></span>Bem-vindo, <?=$_SESSION['nome']?></a></li>
+        <li><a href="#"><span ></span>Bem-vindo, <?=$_SESSION['nome']?></a></li>
         <li><a href="?c=l&a=off"><span class="fas fa-sign-out-alt"></span> Sair </a></li>
       </ul>
     </div>

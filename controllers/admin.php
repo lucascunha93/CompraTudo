@@ -10,8 +10,33 @@ class adminController {
     }
     
     public function index() {
+        $produto = new produtosModel();
+        $produto -> listaProdutos();
+        $produtoResultado = $produto -> mostrarResultado();
+
+        $arrayProdutos = array();
+
+        while($linha = $produtoResultado -> fetch_assoc()){
+            array_push($arrayProdutos,$linha);
+        }
         require_once("views/admin/header.php");
         require_once("views/main/home.php");
+        require_once("views/main/footer.php");
+    }
+
+    public function produtos_adm() {
+        $produto = new produtosModel();
+        $produto -> listaProdutos();
+        $produtoResultado = $produto -> mostrarResultado();
+
+        $arrayProdutos = array();
+
+        while($linha = $produtoResultado -> fetch_assoc()){
+            array_push($arrayProdutos,$linha);
+        }
+
+        require_once("views/admin/header.php");
+        require_once("views/main/produtos.php");
         require_once("views/main/footer.php");
     }
     

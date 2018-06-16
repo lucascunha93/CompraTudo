@@ -9,19 +9,19 @@
             $conectaDb = new conectarDB();
             $conectaDb -> abrirConexao();
             $acessouDb = $conectaDb -> conectouDB();
+
+            $extensao = strtolower(substr($_FILES['imagem']['name'], -4)); //pega a extensao do arquivo
+            $novo_nome = md5(time()) . $extensao; //define o nome do arquivo
+            $diretorio = "C:/wamp/www/CompraTudo/assets/img/produtos/"; //define o diretorio para onde enviaremos o arquivo
+            move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$novo_nome); //efetua o upload
                 
-            if ( $arrayProduto['imagem'] != "none" ) {
-                $sql = "INSERT INTO produtos (nome, descricao, valor_venda, custo, quantidade, imagem ) 
-                        VALUES ('".$arrayProduto['nome']."', '".$arrayProduto['descricao']."', 
-                        '".$arrayProduto['valor_venda']."', '".$arrayProduto['custo']."',
-                        '".$arrayProduto['quantidade']."', '".$arrayProduto['imagem']."');";
-                $acessouDb -> query($sql);
-                $this -> resultado = $acessouDb;
-            }                    
-            else{
-                print "Não foi possível carregar a imagem.";
-            }
-        }
+            $sql = "INSERT INTO produtos (nome, descricao, valor_venda, custo, quantidade, imagem ) 
+                    VALUES ('".$arrayProduto['nome']."', '".$arrayProduto['descricao']."', 
+                    '".$arrayProduto['valor_venda']."', '".$arrayProduto['custo']."',
+                    '".$arrayProduto['quantidade']."', '".$novo_nome."');";
+            $acessouDb -> query($sql);
+            $this -> resultado = $acessouDb;
+        }                    
 
         public function addAdmin( $arrayAdmin ) {
             $conectaDb = new conectarDB();

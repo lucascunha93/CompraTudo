@@ -71,6 +71,7 @@ session_start();
                 else {
                     switch ($_REQUEST['a']) {
                         case 'i': $admin -> index(); break; // pagina inicial do administrador 
+                        case 'pa': $admin -> produtos_adm(); break; // pagina de produtos do administrador
                         case 'ap': $admin -> adiciona_produto(); break; // pagina para inserir produto
                         case 'add': $admin -> add_produto(); break; // insere o produto no banco
                         case 'aa': $admin -> adiciona_admin(); break; // pagina para inserir administrador da página
