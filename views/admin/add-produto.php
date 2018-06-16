@@ -13,6 +13,14 @@
                     <input type="text" class="form-control" name="descricao" placeholder="ex. produto top de linha">
                 </div>
                 <div class="form-group col-md-6">
+                    <label for="inputDesc">Valor de venda:</label>
+                    <input type="text" class="form-control" name="valor_venda" placeholder="ex. 659.25">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputDesc">Valor de custo:</label>
+                    <input type="text" class="form-control" name="custo" placeholder="ex. 225.50">
+                </div>
+                <div class="form-group col-md-6">
                     <label for="inputQtd">Quantidade:</label>
                     <input type="text" class="form-control" name="quantidade" placeholder="ex. 10">
                 </div>

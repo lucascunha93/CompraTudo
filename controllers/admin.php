@@ -24,6 +24,8 @@ class adminController {
     public function add_produto() {
         $arrayProduto["nome"] = $_POST['nome'];
         $arrayProduto["descricao"] = $_POST['descricao'];
+        $arrayProduto["valor_venda"] = $_POST['valor_venda'];
+        $arrayProduto["custo"] = $_POST['custo'];
         $arrayProduto["quantidade"] = $_POST['quantidade'];
         $arrayProduto["imagem"] = $_FILES['imagem']['tmp_name'];
         $admin = new adminModel();

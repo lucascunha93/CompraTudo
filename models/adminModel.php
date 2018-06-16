@@ -11,8 +11,9 @@
             $acessouDb = $conectaDb -> conectouDB();
                 
             if ( $arrayProduto['imagem'] != "none" ) {
-                $sql = "INSERT INTO produtos (nome, descricao , quantidade, imagem ) 
-                        VALUES ('".$arrayProduto['nome']."', '".$arrayProduto['descricao']."',
+                $sql = "INSERT INTO produtos (nome, descricao, valor_venda, custo, quantidade, imagem ) 
+                        VALUES ('".$arrayProduto['nome']."', '".$arrayProduto['descricao']."', 
+                        '".$arrayProduto['valor_venda']."', '".$arrayProduto['custo']."',
                         '".$arrayProduto['quantidade']."', '".$arrayProduto['imagem']."');";
                 $acessouDb -> query($sql);
                 $this -> resultado = $acessouDb;
