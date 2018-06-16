@@ -61,13 +61,13 @@
     <div class="col-md-3 col-md-offset-1 footer-info">
         <h2>Dev by Lucas Cunha</h2>
         <div class="col-md-2 col-md-offset-1 redes-sociais">
-            <a href="www.facebook.com" class="fab fa-facebook"></a>
+            <a href="https://www.facebook.com/cunha.lucas93" class="fab fa-facebook"></a>
         </div>
         <div class="col-md-2 col-md-offset-2 redes-sociais">
-        <a href="www.linkedin.com" class="fab fa-fab fa-linkedin"></a>
+        	<a href="https://www.linkedin.com/in/cunha93/" class="fab fa-fab fa-linkedin"></a>
         </div>
         <div class="col-md-2 col-md-offset-2 redes-sociais">
-            <a href="www.github.com" class="fab fa-github-square"></a>
+            <a href="https://github.com/lucascunha93" class="fab fa-github-square"></a>
         </div>
     </div>
     <div class="col-md-3 col-md-offset-1 footer-info">
