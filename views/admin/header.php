@@ -41,7 +41,7 @@
         <li><a href="?c=m&a=p" >Produtos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="?c=a&a=ap"><span class="fas fa-user-plus"></span>Adicionar administrador </a></li>
+        <li><a href="?c=a&a=aa"><span class="fas fa-user-plus"></span>Adicionar administrador </a></li>
         <li><a href="?c=a&a=ap"><span class="fas fa-plus"></span>Adicionar produto </a></li>
         <li><a href="?c=l&a=cc"><span ></span>Bem-vindo, <?=$_SESSION['nome']?></a></li>
         <li><a href="?c=l&a=off"><span class="fas fa-sign-out-alt"></span> Sair </a></li>

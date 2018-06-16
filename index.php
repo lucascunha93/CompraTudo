@@ -71,8 +71,10 @@ session_start();
                 else {
                     switch ($_REQUEST['a']) {
                         case 'i': $admin -> index(); break; // pagina inicial do administrador 
-                        case 'ap': $admin -> adiciona_produto(); break; // pagina inicial do cliente logado
-                        case 'add': $admin -> add_produto(); break; // pagina inicial do cliente logado
+                        case 'ap': $admin -> adiciona_produto(); break; // pagina para inserir produto
+                        case 'add': $admin -> add_produto(); break; // insere o produto no banco
+                        case 'aa': $admin -> adiciona_admin(); break; // pagina para inserir administrador da página
+                        case 'adda': $admin -> add_admin(); break; // insere administrador no banco
                     }
                 }
         }

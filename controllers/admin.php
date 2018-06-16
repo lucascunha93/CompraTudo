@@ -21,6 +21,12 @@ class adminController {
         require_once("views/main/footer.php");
     }
 
+    public function adiciona_admin() {
+        require_once("views/admin/header.php");
+        require_once("views/admin/add-adm.php");
+        require_once("views/main/footer.php");
+    }
+
     public function add_produto() {
         $arrayProduto["nome"] = $_POST['nome'];
         $arrayProduto["descricao"] = $_POST['descricao'];
@@ -33,15 +39,15 @@ class adminController {
         header("location: index.php?c=a&a=i");
     }
     
-    public function cadastrarAdmin(){
+    public function add_Admin(){
 
-        $arrayUsuario["nome"] = $_POST["nome"];
-        $arrayUsuario["endereco"] = $_POST["endereco"];
-        $arrayUsuario["senha"] = $_POST["senha"];
-        $arrayUsuario["telefone"] = $_POST["telefone"];
-        $arrayUsuario["email"] = $_POST["email"];
-        $admin = new securityModel();
-        $admin -> inserirUsuario($arrayUsuario);
+        $arrayAdmin["nome"] = $_POST["nome"];
+        $arrayAdmin["endereco"] = $_POST["endereco"];
+        $arrayAdmin["senha"] = $_POST["senha"];
+        $arrayAdmin["telefone"] = $_POST["telefone"];
+        $arrayAdmin["email"] = $_POST["email"];
+        $admin = new adminModel();
+        $admin -> addAdmin($arrayAdmin);
         header("location: index.php?c=a&a=i");
     }
 

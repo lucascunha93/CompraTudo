@@ -23,8 +23,15 @@
             }
         }
 
-        public function addAdmin() {
-            
+        public function addAdmin( $arrayAdmin ) {
+            $conectaDb = new conectarDB();
+            $conectaDb -> abrirConexao();
+            $acessouDb = $conectaDb -> conectouDB();
+            $sql = "INSERT INTO usuarios ( nome, email, senha, endereco, telefone, adm ) VALUES 
+                ('".$arrayAdmin['nome']."', '".$arrayAdmin['email']."', '".$arrayAdmin['senha']."', 
+                '".$arrayAdmin['endereco']."', '".$arrayAdmin['telefone']."', '1');";
+            $acessouDb -> query($sql);
+            $this -> resultado = $acessouDb;
         }
 
         public function getConsulta(){
