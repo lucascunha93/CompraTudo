@@ -90,7 +90,7 @@
             <div class="product-carousel-price">
                 <p><?=$produto['valor_venda'];?></p>
             </div>
-            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Adicionar</a>
+            <a href="?c=s&a=add&id=<?=$produto['id'];?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Adicionar</a>
             <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> Mais detalhes</a>
         </div>
     <?php } ?>    

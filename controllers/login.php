@@ -21,7 +21,7 @@
                     $_SESSION['User'] = $line['email'];
                     $_SESSION['nome'] = $line['nome'];
                     
-                    if ($line['adm'] = '1') {
+                    if ($line['adm'] != 0) {
                         header("location: index.php?c=a&a=i");
                     }
                     else {

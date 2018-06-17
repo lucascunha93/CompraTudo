@@ -18,6 +18,7 @@ class clienteController {
         while($linha = $produtoResultado -> fetch_assoc()){
             array_push($arrayProdutos,$linha);
         }
+
         require_once("views/cliente/header.php");
         require_once("views/main/home.php");
         require_once("views/main/footer.php");
@@ -33,36 +34,47 @@ class clienteController {
         $marcaResultado = $marca -> mostrarResultado();
 
         $arrayProdutos = array();
-        $arrayMarcas = array();
-        $arrayCart = array();
-
         while($linha = $produtoResultado -> fetch_assoc()){
             array_push($arrayProdutos,$linha);
         }
 
-        while($linha = $marcaResultado -> fetch_assoc()){
-            array_push($arrayMarcas,$linha);
-        }
-
         require_once("views/cliente/header.php");
-        require_once("views/cliente/menuItem/menuItem.php");
         require_once("views/main/produtos.php");
-        require_once("views/cliente/shoppingCart/shoppingCart.php");
-        require_once("views/cliente/footer.php");
+        require_once("views/main/footer.php");
     }
 
-    public function adicionarProduto( $id ) {
-        $addProd = new produtosModel();
-        $addProd -> addCart($id);
-        $addResult = $addProd -> mostrarResultado();
+    public function shoppingCart() {
 
-        $arrayCart = array();
+        if(!isset($_SESSION['carrinho']) | empty($_SESSION['carrinho'])) {
+            require_once("views/cliente/header.php");
+            require_once("views/shoppingCart/shoppingCart.php");
+            require_once("views/main/footer.php");
+        }
+        else {
+            $cart = $_SESSION['carrinho'];
+            $addProd = new produtosModel();
+            $addProd -> pegaCart(implode(',', array_keys($cart)));
+            $addResult = $addProd -> mostrarResultado();
+            $total=0;
 
-        while($linha = $addResult -> fetch_assoc()){
-            array_push($arrayCart,$linha);
+            foreach($addResult as $result) {   
+                $arrayCart[] = array(
+                    'id' => $result['id'],
+                    'imagem' => $result['imagem'],
+                    'nome' => $result['nome'],
+                    'descricao' => $result['descricao'],
+                    'valor_venda' => $result['valor_venda'],
+                    'qtd' => $cart[$result['id']],
+                    'subtotal' => $cart[$result['id']] * $result['valor_venda'],
+                    'total' => $total + ($cart[$result['id']] * $result['valor_venda']),
+                );
+                $total += $total + ($cart[$result['id']] * $result['valor_venda']);
+            }
+            require_once("views/cliente/header.php");
+            require_once("views/shoppingCart/shoppingCart.php");
+            require_once("views/main/footer.php");
         }
 
-        return $arrayCart;
     }
 
     public function editarPerfil($id) {

@@ -21,12 +21,12 @@ class produtosModel {
         $this -> resultado = $conn -> query($sql);
     }
 
-    public function addCart( $cod ){
+    public function pegaCart( $cod ){
 
         $Oconn = new conectarDB();
         $Oconn -> abrirConexao();
         $conn = $Oconn -> conectouDB();
-        $sql = "SELECT nome, valor FROM produtos WHERE id = ".$cod.";";
+        $sql = "SELECT * FROM produtos WHERE id IN (".$cod.")";
         $this -> resultado = $conn -> query($sql);
     }
 

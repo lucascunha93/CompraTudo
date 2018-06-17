@@ -38,6 +38,12 @@ class mainController {
         require_once("views/main/footer.php");
     }
 
+    public function shoppingCart() {
+        require_once("views/main/header.php");
+        require_once("views/shoppingCart/shoppingCart.php");
+        require_once("views/main/footer.php");
+    }
+
     public function cadastroCliente() {
         require_once("views/main/header.php");
         require_once("views/main/cadastro/cadastro.php");

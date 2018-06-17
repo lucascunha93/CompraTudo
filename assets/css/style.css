@@ -160,6 +160,18 @@ nav .active {
     text-align: left
 }
 
+/* ShoppingCart Página */
+
+.media > a > img {
+    width: 72px; 
+    height: 72px;
+}
+
+.shopping-table {
+    height: 70vh;
+}
+
+
 /* Footer */
 
 .footer-area {

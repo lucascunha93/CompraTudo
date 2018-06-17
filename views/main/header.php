@@ -41,7 +41,7 @@
         <li><a href="?c=m&a=p" >Produtos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="fas fa-shopping-cart"></span>Carrinho </a></li>
+        <li><a href="?c=m&a=sc"><span class="fas fa-shopping-cart"></span>Carrinho </a></li>
         <li><a href="?c=l&a=cc"><span class="fas fa-user-plus"></span> Cadastrar-se </a></li>
         <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="fas fa-sign-in-alt"></span> Entrar </a></li>
       </ul>
