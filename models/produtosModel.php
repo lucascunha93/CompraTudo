@@ -12,15 +12,6 @@ class produtosModel {
         $this -> resultado = $conn -> query($sql);
     }
 
-    public function listaMarcas(){
-
-        $Oconn = new conectarDB();
-        $Oconn -> abrirConexao();
-        $conn = $Oconn -> conectouDB();
-        $sql = 'SELECT * FROM fabricantes';
-        $this -> resultado = $conn -> query($sql);
-    }
-
     public function pegaCart( $cod ){
 
         $Oconn = new conectarDB();

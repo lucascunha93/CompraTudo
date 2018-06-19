@@ -55,7 +55,6 @@ session_start();
                     switch ($_REQUEST['a']) {
                         case 'i': $cliente -> index(); break; // pagina inicial do cliente logado
                         case 'lp': $cliente -> listaProdutos(); break; // pagina de lista do cliente
-                        case 'ap': $cod=$_GET['id']; $cliente -> adicionarProduto($cod); break;
                         case 'sc': $cliente -> shoppingCart(); break;
                         case 'addsc': $cliente -> addshoppingCart(); break;
                         //case 'ep': $cod=$_GET['id']; $cliente -> editarPerfil($cod); break;
@@ -76,13 +75,18 @@ session_start();
                         case 'i': $admin -> index(); break; // pagina inicial do administrador 
                         case 'pa': $admin -> produtos_adm(); break; // pagina de produtos do administrador
                         case 'ap': $admin -> adiciona_produto(); break; // pagina para inserir produto
-                        case 'add': $admin -> add_produto(); break; // insere o produto no banco
+                        case 'eu': $admin -> editar_cad(); break; // página de editar cadastro de usuario
+                        case 'ra': $admin -> lista_usuarios(); break; // pagina de lista de usuarios
+                        case 'rp': $admin -> remove_produto(); break; // pagina para inserir produto
                         case 'aa': $admin -> adiciona_admin(); break; // pagina para inserir administrador da página
+                        case 'add': $admin -> add_produto(); break; // insere o produto no banco
                         case 'adda': $admin -> add_admin(); break; // insere administrador no banco
+                        case 'ec': $cod=$_GET['id']; $admin -> edit_cad( $cod ); break; // edita cadastro de usuario
+                        case 'du': $cod=$_GET['id']; $admin -> delete_cad( $cod ); break; // apaga cadastro de usuario
                     }
                 }
             break;
-            case 's':
+            case 's': // controller shoppingCart
                 require_once("controllers/shoppingCart.php");
                 $cart = new shoppincart();
                 

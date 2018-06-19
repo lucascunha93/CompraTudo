@@ -15,16 +15,6 @@ class clientesModel {
         $this -> resultado = $acessouDb;
     }
 
-    public function consultarCliente($cod) {
-
-        $Oconn = new conectarDB();
-        $Oconn -> abrirConexao();
-        $conn = $Oconn -> conectouDB();
-        $sql = "SELECT * FROM usuarios WHERE id = ".$cod.";";
-        $this -> resultado = $conn -> query($sql);
-
-    }
-
     public function atualizarCliente( $arrayCliente ) {
 
         $Oconn = new conectarDB();

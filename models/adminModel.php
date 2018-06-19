@@ -5,6 +5,14 @@
             require_once("db/logardb.php");
         }
 
+        public function lista_usuarios() {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = 'SELECT * FROM usuarios';
+            $this -> resultado = $conn -> query($sql);
+        }
+
         public function insereProduto( $arrayProduto ) {
             $conectaDb = new conectarDB();
             $conectaDb -> abrirConexao();
@@ -32,6 +40,15 @@
                 '".$arrayAdmin['endereco']."', '".$arrayAdmin['telefone']."', '1');";
             $acessouDb -> query($sql);
             $this -> resultado = $acessouDb;
+        }
+
+        public function edit_cad() {
+            $Oconn = new connectClass();
+            $Oconn -> openConnect();
+            $conn = $Oconn -> getconn();
+            $sql = "UPDATE usuarios set nome='".$arrayClientes['nome']."', email='".$arrayClientes['email']."',
+                endereco='".$arrayClientes['endereco']."', telefone='".$arrayClientes['telefone']."' WHERE idCliente=".$arrayClientes['id'].";";
+            $this -> resultado = $conn -> query($sql);
         }
 
         public function getConsulta(){

@@ -156,6 +156,17 @@ nav .active {
     text-align: center;
 }
 
+.btn-edit {
+    text-align: center;
+}
+
+.edit {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 2px 2px 2px 2px;
+}
+
 .form-addproduto {
     text-align: left
 }

@@ -42,14 +42,31 @@ class adminController {
     
     public function adiciona_produto() {
         require_once("views/admin/header.php");
-        require_once("views/admin/add-produto.php");
+        require_once("views/admin/produtos-adm/add-produto.php");
         require_once("views/main/footer.php");
     }
 
-    public function adiciona_admin() {
+    public function lista_usuarios() {
+        $user = new adminModel();
+        $user -> lista_usuarios();
+        $listaResultado = $user -> getConsulta();
+
+        $arrayUsuarios = array();
+
+        while($linha = $listaResultado -> fetch_assoc()){
+            array_push($arrayUsuarios,$linha);
+        }
         require_once("views/admin/header.php");
-        require_once("views/admin/add-adm.php");
+        require_once("views/admin/mod-adm/lista-users.php");
         require_once("views/main/footer.php");
+    }
+
+    public function edit_cad( $id ) {
+        
+    }
+
+    public function delete_cad( $id ) {
+
     }
 
     public function add_produto() {
