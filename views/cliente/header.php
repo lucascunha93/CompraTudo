@@ -41,7 +41,7 @@
         <li><a href="?c=c&a=lp" >Produtos</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="?c=c&a=sc"><span class="fas fa-shopping-cart"></span>Carrinho </a></li>
+        <li><a href="?c=c&a=scart"><span class="fas fa-shopping-cart"></span>Carrinho </a></li>
         <li><a href="#"><span ></span>Bem-vindo, <?=$_SESSION['nome']?></a></li>
         <li><a href="?c=l&a=off"><span class="fas fa-sign-out-alt"></span> Sair </a></li>
       </ul>

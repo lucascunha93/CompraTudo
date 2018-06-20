@@ -42,11 +42,11 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Administradores
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Gerência
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="?c=a&a=aa">Adicionar administrador</a></li>
-          <li><a href="?c=a&a=ra">Remover administrador</a></li>
+          <li><a href="?c=a&a=lus">Remover usuários</a></li>
         </ul>
       </li>
       <li class="dropdown">

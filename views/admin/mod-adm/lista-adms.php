@@ -2,7 +2,7 @@
 
 <div class="container col-md-6 col-md-offset-3 conteudo">
         <div class="col-md-12 table-responsive">
-                <h1 class="titulo_tabela">Usuário(s) cadastrados!</h1>
+                <h1 class="titulo_tabela">Administradores(s) cadastrados!</h1>
                 <table class="table custab">
                         <thead>
                                 <tr>

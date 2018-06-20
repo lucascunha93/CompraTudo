@@ -13,6 +13,14 @@
             $this -> resultado = $conn -> query($sql);
         }
 
+        public function lista_user( $cod ) {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = 'SELECT * FROM usuarios WHERE id = "'.$cod.'"';
+            $this -> resultado = $conn -> query($sql);
+        }
+
         public function insereProduto( $arrayProduto ) {
             $conectaDb = new conectarDB();
             $conectaDb -> abrirConexao();
@@ -31,6 +39,14 @@
             $this -> resultado = $acessouDb;
         }                    
 
+        public function lista_produto( $id ) {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = 'SELECT * FROM produtos WHERE id = "'.$id.'"';
+            $this -> resultado = $conn -> query($sql);
+        }
+
         public function addAdmin( $arrayAdmin ) {
             $conectaDb = new conectarDB();
             $conectaDb -> abrirConexao();
@@ -42,12 +58,39 @@
             $this -> resultado = $acessouDb;
         }
 
-        public function edit_cad() {
-            $Oconn = new connectClass();
-            $Oconn -> openConnect();
-            $conn = $Oconn -> getconn();
-            $sql = "UPDATE usuarios set nome='".$arrayClientes['nome']."', email='".$arrayClientes['email']."',
-                endereco='".$arrayClientes['endereco']."', telefone='".$arrayClientes['telefone']."' WHERE idCliente=".$arrayClientes['id'].";";
+        public function edit_cad( $arrayUsuario ) {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = "UPDATE usuarios set nome='".$arrayUsuario['nome']."', email='".$arrayUsuario['email']."',
+                senha='".$arrayUsuario['senha']."', endereco='".$arrayUsuario['endereco']."', 
+                telefone='".$arrayUsuario['telefone']."' WHERE id=".$arrayUsuario['id'].";";
+            $this -> resultado = $conn -> query($sql);
+        }
+
+        public function rem_cad( $id ) {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = "DELETE FROM usuarios WHERE id = '".$id."';";
+            $this -> resultado = $conn -> query($sql);
+        }
+
+        public function edita_produto( $arrayProduto ) {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = "UPDATE produtos set nome='".$arrayProduto['nome']."', descricao='".$arrayProduto['descricao']."',
+                valor_venda='".$arrayProduto['valor_venda']."', custo='".$arrayProduto['custo']."', 
+                quantidade='".$arrayProduto['quantidade']."' WHERE id=".$arrayProduto['id'].";";
+            $this -> resultado = $conn -> query($sql);
+        }
+
+        public function deleta_produto( $id ) {
+            $Oconn = new conectarDB();
+            $Oconn -> abrirConexao();
+            $conn = $Oconn -> conectouDB();
+            $sql = "DELETE FROM produtos WHERE id = '".$id."';";
             $this -> resultado = $conn -> query($sql);
         }
 

@@ -13,7 +13,7 @@
                 </thead>
                 <tbody>
                 <?php
-                    if (!isset($arrayCart)) {?>
+                    if (empty($arrayCart)) {?>
                 </tbody>
             </table>         
                 <div class="shopping-table">
@@ -21,7 +21,7 @@
                 </div>  
                 <?php } ?>
                 <?php 
-                if( isset($arrayCart)) {
+                if( !empty($arrayCart)) {
                     foreach ($arrayCart as $cart){?>  
                 
                     <tr>
@@ -39,7 +39,7 @@
                         <td class="col-sm-1 col-md-1 text-center"><strong><?=$cart['valor_venda'];?></strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong><?=$cart['subtotal'];?></strong></td>
                         <td class="col-sm-1 col-md-1">
-                        <a href="?c=s&a=alt&id=<?=$cart['id'];?>">
+                        <a href="?c=c&a=rem&id=<?=$cart['id'];?>">
                             <button type="button" class="btn btn-danger">
                             <span class="glyphicon glyphicon-remove"></span> Remover</button></td>
                         </a>
@@ -57,12 +57,15 @@
                         <td>   </td>
                         <td>   </td>
                         <td>
-                        <button type="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                        </button></td>
+                            <a href="?c=c&a=lp">
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Continue comprando
+                                </button>
+                            </a>
+                        </td>
                         <td>
                         <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
+                            Finalizar compra <span class="glyphicon glyphicon-play"></span>
                         </button></td>
                     </tr>
                 <?php } ?>   

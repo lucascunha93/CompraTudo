@@ -21,8 +21,8 @@ session_start();
                 else {
                     switch ($_REQUEST['a']) {
                         case 'i': $main -> index(); break; // pagina inicial
-                        case 'p': $main -> produtos(); break; // pagina lista de produtos
-                        case 'sc': $main -> shoppingCart(); break; // pagina de carrinho de compras
+                        case 'p': $main -> listaprodutos(); break; // pagina lista de produtos
+                        case 'sc': $main -> shoppingCart(); break; // pagina de carrinho de produtos
                         case 'cc': $main -> cadastroCliente(); break; // pagina de cadastro de clientes
                         case 'ccl': $main -> cadastrarCliente(); break; // metodo para inserir os dados do cliente no BD
                     }
@@ -55,8 +55,9 @@ session_start();
                     switch ($_REQUEST['a']) {
                         case 'i': $cliente -> index(); break; // pagina inicial do cliente logado
                         case 'lp': $cliente -> listaProdutos(); break; // pagina de lista do cliente
-                        case 'sc': $cliente -> shoppingCart(); break;
-                        case 'addsc': $cliente -> addshoppingCart(); break;
+                        case 'scart': $cliente -> shoppingCart(); break; // pagina de carrinho de compras
+                        case 'addsc': $cod=$_GET['id']; $cliente -> addItemCart($cod); break; // adiciona item no carrinho
+                        case 'rem': $cod=$_GET['id']; $cliente -> removeItemCart($cod); // remove um item do carrinho
                         //case 'ep': $cod=$_GET['id']; $cliente -> editarPerfil($cod); break;
                         //case 'ape': $cliente -> atualizarPerfil(); break;
                         //case 'dc': $cod=$_GET['id']; $cliente -> deletarCliente($cod); break; 
@@ -75,31 +76,20 @@ session_start();
                         case 'i': $admin -> index(); break; // pagina inicial do administrador 
                         case 'pa': $admin -> produtos_adm(); break; // pagina de produtos do administrador
                         case 'ap': $admin -> adiciona_produto(); break; // pagina para inserir produto
-                        case 'eu': $admin -> editar_cad(); break; // página de editar cadastro de usuario
-                        case 'ra': $admin -> lista_usuarios(); break; // pagina de lista de usuarios
-                        case 'rp': $admin -> remove_produto(); break; // pagina para inserir produto
-                        case 'aa': $admin -> adiciona_admin(); break; // pagina para inserir administrador da página
+                        case 'lus': $admin -> lista_usuarios(); break; // pagina de lista de usuarios
+                        case 'lu': $cod=$_GET['id']; $admin -> lista_user( $cod ); break; // página de editar cadastro de usuario
+                        case 'rp': $admin -> lista_produtos(); break; // pagina para inserir produto
+                        case 'lp': $cod=$_GET['id']; $admin -> lista_produto($cod); break; // pagina para inserir produto
+                        case 'aa': $admin -> adiciona_adm(); break; // pagina para inserir administrador da página
                         case 'add': $admin -> add_produto(); break; // insere o produto no banco
                         case 'adda': $admin -> add_admin(); break; // insere administrador no banco
                         case 'ec': $cod=$_GET['id']; $admin -> edit_cad( $cod ); break; // edita cadastro de usuario
-                        case 'du': $cod=$_GET['id']; $admin -> delete_cad( $cod ); break; // apaga cadastro de usuario
+                        case 'du': $cod=$_GET['id']; $admin -> deleta_cad( $cod ); break; // delete cadastro de usuario
+                        case 'ep': $cod=$_GET['id']; $admin -> edita_produto( $cod ); break; // edita cadastro de produto
+                        case 'dp': $cod=$_GET['id']; $admin -> deleta_produto( $cod ); break; // deleta cadastro de usuario
                     }
                 }
             break;
-            case 's': // controller shoppingCart
-                require_once("controllers/shoppingCart.php");
-                $cart = new shoppincart();
-                
-                if (!isset($_GET['a'])) {
-                    $cart -> index();
-                }
-                else {
-                    switch ($_REQUEST['a']) {
-                        case 'add': $cod=$_GET['id']; $cart -> addCart($cod); break; // add produto no carrinho
-                        case 'rem': $cod=$_GET['id']; $cart -> removeCart($cod); break; // remove produto no carrinho
-                        case 'alt': $cod=$_GET['id']; $cart -> alterCart($cod); break; // altera produto no carrinho
-                    }
-                }
         }
     }
 ?>

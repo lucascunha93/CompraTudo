@@ -4,6 +4,7 @@ class clienteController {
         if (!isset($_SESSION['nome'])) {
             header("location: index.php?c=m&a=i");
         }
+        require_once ("models/shoppingCartModel.php");
         require_once ("models/clientesModel.php");
         require_once ("models/produtosModel.php");
     }
@@ -29,10 +30,6 @@ class clienteController {
         $produto -> listaProdutos();
         $produtoResultado = $produto -> mostrarResultado();
         
-        $marca = new produtosModel();
-        $marca -> listaMarcas();
-        $marcaResultado = $marca -> mostrarResultado();
-
         $arrayProdutos = array();
         while($linha = $produtoResultado -> fetch_assoc()){
             array_push($arrayProdutos,$linha);
@@ -44,62 +41,33 @@ class clienteController {
     }
 
     public function shoppingCart() {
-
-        if(!isset($_SESSION['carrinho']) | empty($_SESSION['carrinho'])) {
-            require_once("views/cliente/header.php");
-            require_once("views/shoppingCart/shoppingCart.php");
-            require_once("views/main/footer.php");
+        if (!isset($_SESSION['idUser'])) {
+            header("location: index.php?c=m&a=sc");
         }
-        else {
-            $cart = $_SESSION['carrinho'];
-            $addProd = new produtosModel();
-            $addProd -> pegaCart(implode(',', array_keys($cart)));
-            $addResult = $addProd -> mostrarResultado();
-            $total=0;
-
-            foreach($addResult as $result) {   
-                $arrayCart[] = array(
-                    'id' => $result['id'],
-                    'imagem' => $result['imagem'],
-                    'nome' => $result['nome'],
-                    'descricao' => $result['descricao'],
-                    'valor_venda' => $result['valor_venda'],
-                    'qtd' => $cart[$result['id']],
-                    'subtotal' => $cart[$result['id']] * $result['valor_venda'],
-                    'total' => $total + ($cart[$result['id']] * $result['valor_venda']),
-                );
-                $total += $total + ($cart[$result['id']] * $result['valor_venda']);
-            }
-            require_once("views/cliente/header.php");
-            require_once("views/shoppingCart/shoppingCart.php");
-            require_once("views/main/footer.php");
-        }
-
-    }
-
-    public function editarPerfil($id) {
-        $cliente = new clientesModel();
-        $cliente -> consultarCliente($id);
-        $resultado = $cliente -> getConsulta();
-
-        if( $arrayCliente = $resultado -> fetch_assoc()) {
-            require_once ("views/cliente/header.php");
-            require_once ("views/cliente/editarPerfil/editarPerfil.php");
-            require_once ("views/cliente/footer.php");
+        else{    
+        $cart = new shoppincart();
+        $arrayCart = $cart -> mostraListaCarrinho();
+        require_once("views/cliente/header.php");
+        require_once("views/shoppingCart/shoppingCart.php");
+        require_once("views/main/footer.php");
         }
     }
 
-    public function atualizarPerfil() {
+    public function removeItemCart( $id){
+        $cart = new shoppincart();
+        $cart -> removeCart( $id );
+        header("location: index.php?c=c&a=scart");
+    }
 
-        $arrayCliente["id"] = $_POST["id"];
-        $arrayCliente["nome"] = $_POST["nome"];
-        $arrayCliente["endereco"] = $_POST["endereco"];
-        $arrayCliente["email"] = $_POST["email"];
-        $arrayCliente["senha"] = $_POST["senha"];
-        $arrayCliente["telefone"] = $_POST["telefone"];
-        $cliente = new clientesModel();
-        $cliente -> atualizarCliente( $arrayCliente );
-        $this -> index();
+    public function addItemCart( $id){
+        if (!isset($_SESSION['idUser'])) {
+            header("location: index.php?c=m&a=cc");
+        }
+        else{
+        $cart = new shoppincart();
+        $cart -> addCart( $id );
+        header("location: index.php?c=c&a=lp");
+        }
     }
 }
 ?>

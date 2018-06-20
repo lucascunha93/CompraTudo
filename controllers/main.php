@@ -2,11 +2,12 @@
 class mainController {
 
     function __construct() {
+        require_once ("models/shoppingCartModel.php");
         require_once ("models/produtosModel.php");
         require_once ("models/clientesModel.php");
     }
 
-    public function index() {
+    public function pegaProdutosBD() {
         $produto = new produtosModel();
         $produto -> listaProdutos();
         $produtoResultado = $produto -> mostrarResultado();
@@ -16,29 +17,29 @@ class mainController {
         while($linha = $produtoResultado -> fetch_assoc()){
             array_push($arrayProdutos,$linha);
         }
+        return $arrayProdutos;
+    }
+
+    public function index() {
+        
+        $arrayProdutos = $this -> pegaProdutosBD();
         
         require_once("views/main/header.php");
         require_once("views/main/home.php");
         require_once("views/main/footer.php");
     }
 
-    public function produtos() {
-        $produto = new produtosModel();
-        $produto -> listaProdutos();
-        $produtoResultado = $produto -> mostrarResultado();
-
-        $arrayProdutos = array();
-
-        while($linha = $produtoResultado -> fetch_assoc()){
-            array_push($arrayProdutos,$linha);
-        }
+    public function listaProdutos() {
+        $arrayProdutos = $this -> pegaProdutosBD();
 
         require_once("views/main/header.php");
         require_once("views/main/produtos.php");
         require_once("views/main/footer.php");
     }
 
-    public function shoppingCart() {
+    public function shoppingCart() {     
+        $cart = new shoppincart();
+        $arrayCart = $cart -> mostraListaCarrinho();
         require_once("views/main/header.php");
         require_once("views/shoppingCart/shoppingCart.php");
         require_once("views/main/footer.php");
@@ -61,9 +62,7 @@ class mainController {
         $cliente -> cadastrarCliente($arrayCliente);
         $idCliente = $cliente -> getConsulta();
 
-        require_once("views/main/header.php");
-        require_once("views/main/home.php");
-        require_once("views/main/footer.php");
+        header("location: index.php?c=m&a=i");
     }
 }
 ?>
