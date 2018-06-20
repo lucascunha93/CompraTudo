@@ -168,10 +168,10 @@ class adminController {
         header("location: index.php?c=a&a=i");
     }
 
-    public function deleta_produto( $id ) {
+    public function deleta_produto( $id, $img ) {
         $admin = new adminModel();
         $admin -> deleta_produto( $id );
-
+        unlink($img);
         header("location: index.php?c=a&a=rp");
     }
 

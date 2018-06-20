@@ -6,6 +6,10 @@ body,html {
 
 /* Navbar */
 
+.icon-bar, .navbar-toggle {
+    background-color: black;
+}
+
 .navbar-inverse {
     background-color: rgb(235, 233, 233);
     border: none;
@@ -169,6 +173,24 @@ nav .active {
 
 .form-addproduto {
     text-align: left
+}
+
+.img-lista-produto {
+   float: left; 
+}
+
+.img-lista-produto > div > img {
+    height: 40vh;
+    min-height: 100px;
+    width: auto; 
+ }
+
+.lista-produto {
+    float: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 /* ShoppingCart Página */

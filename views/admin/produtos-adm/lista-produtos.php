@@ -7,6 +7,7 @@
                         <thead>
                                 <tr>
                                         <th>ID </th>
+                                        <th>Imagem</th>
                                         <th>Nome</th>
                                         <th>Descrição</th>
                                         <th>Valor de venda</th>
@@ -18,16 +19,18 @@
                 <?php foreach ($arrayProdutos as $produto){?>
                         <tr>
                                 <td><?= $produto['id'];?></td>
+                                <td><img class="img-produto" src="assets/img/produtos/<?=$produto['imagem'];?>" alt="img-produto"></td>
                                 <td><?= $produto['nome'];?></td>
                                 <td><?= $produto['descricao'];?></td>
                                 <td><?= $produto['valor_venda'];?></td>
                                 <td><?= $produto['custo'];?></td>
                                 <td><?= $produto['quantidade'];?></td>
                                 <td class="btn-edit">
-                                        <a class="btn btn-danger edit" href="?c=a&a=dp&id=<?=$produto["id"]?>" aria-label="Settings">
+                                        <a class="btn btn-danger edit" href="?c=a&a=dp&id=<?=$produto["id"]?>&
+                                                img=C:\wamp\www\CompraTudo\assets\img\produtos/<?=$produto["imagem"]?>" aria-label="Settings">
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
-                                        <a class="btn btn-warning edit" href="?c=a&a=lp&id=<?=$produto["id"]?>" aria-label="Settings">
+                                        <a class="btn btn-warning edit" href="?c=a&a=lp&id=<?=$produto["id"]?>&" aria-label="Settings">
                                                 <i class="far fa-edit" aria-hidden="true"></i>
                                         </a> 
                                 </td>

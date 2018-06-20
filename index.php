@@ -86,7 +86,7 @@ session_start();
                         case 'ec': $cod=$_GET['id']; $admin -> edit_cad( $cod ); break; // edita cadastro de usuario
                         case 'du': $cod=$_GET['id']; $admin -> deleta_cad( $cod ); break; // delete cadastro de usuario
                         case 'ep': $cod=$_GET['id']; $admin -> edita_produto( $cod ); break; // edita cadastro de produto
-                        case 'dp': $cod=$_GET['id']; $admin -> deleta_produto( $cod ); break; // deleta cadastro de usuario
+                        case 'dp': $cod=$_GET['id']; $codimg=$_GET['img']; $admin -> deleta_produto( $cod, $codimg ); break; // deleta cadastro de usuario
                     }
                 }
             break;
