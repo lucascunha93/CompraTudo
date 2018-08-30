@@ -1,6 +1,11 @@
 /* TIPOGRAFIA
 *****************/
 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+
 a {
     color: white;
 }

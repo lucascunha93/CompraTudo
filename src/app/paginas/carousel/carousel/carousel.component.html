@@ -1,0 +1,30 @@
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li *ngFor="let img of carousel " data-target="#demo" data-slide-to="0" class="indicador-slide active"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="col-md-12 carousel-inner">
+    <div *ngFor="let imagem of carousel" class="carousel-item {{imagem?.css}}">
+      <div class="row">
+        <div class="col-md-8">
+          <img src="{{imagem.img}}" class="carousel-img" alt="Los Angeles">
+        </div>
+        <div class="col-md-4 info-produto-carousel">
+          <button class="btn-ver-produto">Ver produto</button>
+          <h2 class="animate-opacity">Apple Iphone X</h2>
+          <p class="animate-opacity">O mais novo Smartphone da Apple.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev " href="#demo" data-slide="prev">
+    <span class="fa fa-chevron-left indicador-carousel"></span>
+  </a>
+  <a class="carousel-control-next " href="#demo" data-slide="next">
+    <span class="fa fa-chevron-right indicador-carousel"></span>
+  </a>
+</div>

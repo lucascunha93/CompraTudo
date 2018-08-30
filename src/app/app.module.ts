@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { NavComponent } from './nav/nav.component';
+import { HeaderComponent } from './paginas/header/header.component';
+import { NavComponent } from './paginas/nav/nav.component';
+import { CarouselComponent } from './paginas/carousel/carousel/carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
