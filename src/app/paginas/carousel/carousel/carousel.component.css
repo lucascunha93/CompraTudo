@@ -29,7 +29,7 @@
 }
 
 .animate-opacity {
-    animation: animate-opacidade 7s;
+    animation: animate-opacidade 3s ease;
 }
 
 .btn-ver-produto {
@@ -39,8 +39,7 @@
     font-style: italic;
     border: 1px solid rgba(0, 141, 148, 0.53);
     text-decoration: none;
-    animation-name: button-deslize;
-    animation-duration: 2s;
+    animation: animate-opacidade 3s ease;
 }
 
 .btn-ver-produto:hover{
@@ -50,20 +49,4 @@
 
 .info-produto-carousel > h2 {
     margin: 10px 0;
-}
-
-
-
-/*******************
-      ANIMAÇÂO
-********************/
-
-@keyframes button-deslize {
-    100%   {margin-left:0px }
-    0%  {margin-left:300px; display: none; }
-}
-
-@keyframes animate-opacidade {
-    from { opacity: 0}
-    to { opacity: 1}
 }
