@@ -27,5 +27,10 @@
 
 .link:hover {
     background-color: rgb(89, 89, 89);
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    background-color: rgb(158, 158, 158);
     color: rgb(0, 0, 0);
 }
