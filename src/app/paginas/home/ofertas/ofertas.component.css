@@ -2,3 +2,10 @@
   padding: 3em 4em;
   margin: 0 auto;
 }
+
+.produto-area {
+  overflow: hidden;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 0;
+}
