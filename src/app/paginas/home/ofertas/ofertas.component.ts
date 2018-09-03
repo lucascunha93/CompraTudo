@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Produto } from '../../../produtos/produto/produto/produto.model';
+
+import { Produto } from './../../produtos/produto/produto.model';
+import { ProdutosService } from '../../../services/produtos/produtos.service';
 
 @Component({
   selector: 'ct-ofertas',
@@ -8,10 +10,12 @@ import { Produto } from '../../../produtos/produto/produto/produto.model';
 })
 export class OfertasComponent implements OnInit {
 
-
-  constructor() { }
+  ofertas: Produto[] 
+  constructor( private produtosService: ProdutosService ) { }
 
   ngOnInit() {
+    this.produtosService.getOfertas()
+      .subscribe( ofertas => this.ofertas = ofertas );
   }
 
 }

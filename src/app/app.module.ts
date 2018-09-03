@@ -11,11 +11,14 @@ import { NavComponent } from './paginas/nav/nav.component';
 import { CarouselComponent } from './paginas/home/carousel/carousel.component';
 import { OfertasComponent } from './paginas/home/ofertas/ofertas.component';
 import { ContatoComponent } from './paginas/contato/contato/contato.component';
-import { ProdutosComponent } from './paginas/produtos/produtos/produtos.component';
+import { ProdutosComponent } from './paginas/produtos/produtos.component';
 import { CarrinhoComponent } from './paginas/carrinho/carrinho/carrinho.component';
 import { SobreComponent } from './paginas/sobre/sobre/sobre.component';
 import { HomeComponent } from './paginas/home/home.component';
-import { ProdutoComponent } from './produtos/produto/produto/produto.component';
+import { ProdutoComponent } from './paginas/produtos/produto/produto.component';
+
+import { ProdutosService } from './services/produtos/produtos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,15 @@ import { ProdutoComponent } from './produtos/produto/produto/produto.component';
     CarrinhoComponent,
     SobreComponent,
     HomeComponent,
-    ProdutoComponent
+    ProdutoComponent,
   ],
   imports: [
     BrowserModule,
     AngularFontAwesomeModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [ ProdutosService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
