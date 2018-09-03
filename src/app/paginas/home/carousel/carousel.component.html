@@ -1,12 +1,12 @@
 <div id="demo" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ul class="carousel-indicators">
-    <li *ngFor="let img of carousel " data-target="#demo" data-slide-to="0" class="indicador-slide active"></li>
+    <li *ngFor="let img of carousel; let i = index" data-target="#demo" data-slide-to="0" class="indicador-slide {{ i == 0 ? 'active' : ''}}"></li>
   </ul>
 
   <!-- The slideshow -->
   <div class="col-md-12 carousel-inner">
-    <div *ngFor="let imagem of carousel" class="carousel-item {{imagem?.css}}">
+    <div *ngFor="let imagem of carousel; let i = index" class="carousel-item {{ i == 0 ? 'active' : ''}}">
       <div class="row">
         <div class="col-md-8">
           <img src="{{imagem.img}}" class="carousel-img" alt="Los Angeles">

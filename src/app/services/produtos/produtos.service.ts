@@ -11,15 +11,14 @@ import { Util } from "./../../../Util";
 export class ProdutosService {
   constructor(private http: HttpClient) {}
 
-  prod: Produto[] = [
-    { img: "assets/img/mac.jpg", nome: "MacBook Air 2018", valor: 4589.99 },
-    { img: "assets/img/iphonex.jpg", nome: "Apple Iphone X", valor: 3999.99 },
-    {  img: "assets/img/mac.jpg", nome: "MacBook Air 2018", valor: 4589.99 },
-    {  img: "assets/img/mac.jpg", nome: "MacBook Air 2018", valor: 4589.99 }
-  ]
-
-
+  prod: Produto[]
+  
   getOfertas(): Observable<Produto[]> {
     return this.http.get<Produto[]>(`${Util.url}/produtos`);
   }
+
+  getSlider(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${Util.url}/slider`);
+  }
+
 }

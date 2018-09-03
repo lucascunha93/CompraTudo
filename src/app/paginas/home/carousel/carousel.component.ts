@@ -1,4 +1,6 @@
+import { Produto } from './../../produtos/produto/produto.model';
 import { Component, OnInit } from '@angular/core';
+import { ProdutosService } from '../../../services/produtos/produtos.service';
 
 @Component({
   selector: 'ct-carousel',
@@ -8,15 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class CarouselComponent implements OnInit {
 
 
-  carousel = [
-    { img: 'assets/img/mac.jpg', css: 'active' },
-    { img: 'assets/img/iphonex.jpg' },
-    { img: 'assets/img/iphonex.jpg' }
-  ]
+  carousel: Produto[]
 
-  constructor() { }
+  constructor( private produtoService: ProdutosService ) { }
 
   ngOnInit() {
+    this.produtoService.getSlider()
+      .subscribe( carousel => this.carousel = carousel);
   }
 
 }

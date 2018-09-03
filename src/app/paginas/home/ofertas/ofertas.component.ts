@@ -10,7 +10,8 @@ import { ProdutosService } from '../../../services/produtos/produtos.service';
 })
 export class OfertasComponent implements OnInit {
 
-  ofertas: Produto[] 
+  ofertas: Produto[]
+   
   constructor( private produtosService: ProdutosService ) { }
 
   ngOnInit() {
