@@ -31,15 +31,11 @@ a:hover
     padding: 1.3em 0;
 }
 
-
-.produto-area {
-    overflow: hidden;
-    min-width: 100px;
-    min-height: 100px;
-    padding: 0;
+.page-area {
+    padding: 3em 4em;
+    margin: 0 auto;
   }
-
-
+  
 /*******************
       ANIMAÇÂO
 ********************/

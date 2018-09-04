@@ -1,0 +1,11 @@
+.titulo-padding > h2 {
+    border-bottom: 2px solid green;
+    display: table;
+    margin: 0;
+    padding: 0 20px 0 0;
+}
+
+.sobre-content > p {
+    text-align: justify;
+    text-indent: 40px;
+}
