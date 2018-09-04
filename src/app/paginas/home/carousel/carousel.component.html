@@ -6,15 +6,17 @@
 
   <!-- The slideshow -->
   <div class="col-md-12 carousel-inner">
-    <div *ngFor="let imagem of carousel; let i = index" class="carousel-item {{ i == 0 ? 'active' : ''}}">
-      <div class="row">
-        <div class="col-md-8">
-          <img src="{{imagem.img}}" class="carousel-img" alt="Los Angeles">
-        </div>
-        <div class="col-md-4 info-produto-carousel">
-          <button class="btn-ver-produto">Ver produto</button>
-          <h2 class="animate-opacity">Apple Iphone X</h2>
-          <p class="animate-opacity">O mais novo Smartphone da Apple.</p>
+    <div *ngFor="let produto of carousel; let i = index" class="carousel-item {{ i == 0 ? 'active' : ''}}">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-7 img-campo">
+            <img src="{{produto.img}}" class="carousel-img" alt="{{produto.nome}}">
+          </div>
+          <div class="col-md-5 info-produto-carousel">
+            <button class="btn-ver-produto">Ver produto</button>
+            <h2 class="animate-opacity">{{produto.nome}}</h2>
+            <p class="animate-opacity">{{produto.descricao}}</p>
+          </div>
         </div>
       </div>
     </div>
