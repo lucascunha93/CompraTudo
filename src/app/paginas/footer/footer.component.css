@@ -1,0 +1,71 @@
+.footer-area {
+    background-color: rgba(0, 0, 0, 0.728);
+    color: rgb(207, 207, 207);
+    padding: 30px;
+}
+
+.loja-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-footer {
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+.descricao-loja-footer {
+    text-align: justify;
+}
+
+.redes-sociais-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: none;
+}
+
+.rede-sociais-area {
+    background-color: green;
+    color: rgb(207, 207, 207);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    padding: 15px 16px;
+}
+
+.rede-sociais-area-facebook {
+    padding: 15px 20px;
+}
+
+.rede-sociais-area:hover {
+    background-color: rgb(0, 192, 0);
+    color: rgb(0, 0, 0);
+}
+
+.info-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+ 
+.info-footer > h3 {
+    padding-bottom: 15px;
+}
+
+.info-footer > p {
+    margin: 2px 0;
+}
+
+.info-footer > a {
+    transition: color 1s ease;
+    padding: 2px 0 0 0;
+}
+
+.info-footer > a:hover {
+    border-bottom: 1px solid green;
+}

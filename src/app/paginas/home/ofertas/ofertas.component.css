@@ -3,6 +3,13 @@
   margin: 0 auto;
 }
 
+.ofertas-area > div > .titulo-padding {
+  display: table;
+  padding: 0 20px 5px 0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid green;
+}
+
 .produto-area {
   overflow: hidden;
   min-width: 100px;

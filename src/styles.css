@@ -9,7 +9,7 @@ body {
 
 
 a {
-    color: white;
+    color: rgb(207, 207, 207);
 }
 
 a:link {
@@ -19,7 +19,7 @@ a:link {
 
 a:hover 
 {
-     color:#00A0C6; 
+     color:rgb(1, 231, 131); 
      text-decoration:none; 
      cursor:pointer;  
 }

@@ -1,8 +1,10 @@
 <div class="col-md-12 ofertas-area">
-  <h2 class="titulo-padding">Ofertas para você</h2>
+  <div>
+    <h2 class="titulo-padding">Ofertas para você</h2>
+  </div>
   <div class="row">
     <div *ngFor="let prod of ofertas" class="col-md-4 produto-area">
-      <ct-produto [produto]="prod" ></ct-produto>
+      <ct-produto [produto]="prod"></ct-produto>
     </div>
   </div>
 </div>
