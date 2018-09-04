@@ -11,14 +11,16 @@ import { Util } from "./../../../Util";
 export class ProdutosService {
   constructor(private http: HttpClient) {}
 
-  prod: Produto[]
-  
   getOfertas(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(`${Util.url}/produtos`);
+    return this.http.get<Produto[]>(`${Util.url}/ofertas`);
   }
 
   getSlider(): Observable<Produto[]> {
     return this.http.get<Produto[]>(`${Util.url}/slider`);
+  }
+
+  getProdutos(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${Util.url}/produtos`);
   }
 
 }
