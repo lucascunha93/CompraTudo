@@ -12,7 +12,7 @@ import { FooterComponent } from './paginas/footer/footer.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { CarouselComponent } from './paginas/home/carousel/carousel.component';
 import { OfertasComponent } from './paginas/home/ofertas/ofertas.component';
-import { ContatoComponent } from './paginas/contato/contato/contato.component';
+import { ContatoComponent } from './paginas/contato/contato.component';
 import { ProdutosComponent } from './paginas/produtos/produtos.component';
 import { CarrinhoComponent } from './paginas/carrinho/carrinho/carrinho.component';
 import { SobreComponent } from './paginas/sobre/sobre/sobre.component';
