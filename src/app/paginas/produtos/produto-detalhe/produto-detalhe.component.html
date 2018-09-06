@@ -1,13 +1,13 @@
 <div class="col-md-12 page-area">
   <div class="row produto-detalhe-area">
-    <div class="col-md-6 campo-produto-img">
-      <img class="img-produto-detalhe" src="assets/img/mac.jpg" alt="" srcset="">
+    <div class="col-md-6 campo-produto-img" *ngIf="produto">
+      <img class="img-produto-detalhe" [src]="produto?.img" alt="{{produto?.img}}" srcset="">
     </div>
     <div class="col-md-6 campo-descricao-produto">
-      <h2>MacBook Air 2018 Apple</h2>
+      <h2>{{produto?.nome}}</h2>
       <div class="row">
         <div class="col-md-7 campo-valores">
-          <h5>por:<span> R$4389.90</span></h5>
+          <h5>por:<span> R${{produto?.valor}}</span></h5>
           <h6>em ate <span>12x R$ 365,82 sem juros</span> no cartão de crédito.</h6>
           <h6>aceitamos cartões:</h6>
           <div class="img-cartoes">

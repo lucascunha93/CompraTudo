@@ -1,6 +1,6 @@
 <div class="produto-content">
   <div class="box-hover">
-    <button class="btn-ver-produto">Ver produto</button>
+    <button class="btn-ver-produto"><a [routerLink]="['/produtos', produto.id]">Ver produto</a></button>
   </div>
   <img [src]="produto.img" class="img-produto-venda" alt="">
   <h4>{{produto.nome}}</h4>
