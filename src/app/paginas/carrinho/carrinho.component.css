@@ -1,0 +1,60 @@
+table {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+table, th, th, td {
+    border: solid 2px white; 
+    padding: 5px;
+}
+
+td {
+    background: rgb(224, 224, 224);
+    border-radius: 5px;
+}
+
+th {
+    background: rgba(88, 255, 163, 0.714);
+    border-radius: 5px;
+}
+
+.produto-img-carrinho {
+    width: 200px;
+    height: auto;
+}
+
+.ipt-carrinho {
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.442);
+    text-align: center;
+}
+
+.fa-trash {
+    color: black;
+}
+
+.fa-trash:hover {
+    color: rgb(177, 2, 2);
+}
+
+.table-bottom {
+    text-align: end;
+    
+}
+
+.table-bottom > td, .table-bottom > td > h6 {
+    padding: 0 2px;
+    margin: 2px;
+}
+
+.btn-finalizar {
+    margin: 20px 20px 0 0;
+    color: white;
+    background-color: rgb(3, 187, 3);
+}
+
+.btn-finalizar:active {
+    color: rgb(206, 206, 206);
+}

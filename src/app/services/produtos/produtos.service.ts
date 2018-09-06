@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
 
 import { Produto } from "./../../paginas/produtos/produto/produto.model";
 import { Util } from "./../../../Util";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: "root"
@@ -22,5 +22,4 @@ export class ProdutosService {
   getProdutos(): Observable<Produto[]> {
     return this.http.get<Produto[]>(`${Util.url}/produtos`);
   }
-
 }
