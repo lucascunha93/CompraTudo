@@ -1,7 +1,10 @@
-import { Produto } from './../produto/produto.model';
-import { Component, OnInit } from '@angular/core';
-import { ProdutosService } from '../../../services/produtos/produtos.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { ProdutosService } from '../../../services/produtos/produtos.service';
+import { CarrinhoService } from './../../../services/carrinho/carrinho.service';
+
+import { Produto } from './../produto/produto.model';
 
 @Component({
   selector: 'ct-produto-detalhe',
@@ -14,6 +17,7 @@ export class ProdutoDetalheComponent implements OnInit {
 
   constructor( 
     private produtoService: ProdutosService,
+    private carrinho: CarrinhoService,
     private route: ActivatedRoute
     ) { }
 
@@ -21,6 +25,10 @@ export class ProdutoDetalheComponent implements OnInit {
 
     this.produtoService.getProdutoById( this.route.snapshot.params['id'] )
       .subscribe( produto => this.produto = produto )
+  }
+
+  comprarProduto( produto ) {
+    this.carrinho.addProduto( produto );
   }
 
 }

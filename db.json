@@ -1,24 +1,24 @@
 {
   "ofertas": [
-    { "id": 1, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99 },
-    { "id": 2, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99 },
-    { "id": 3, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99 },
-    { "id": 4, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99 }
+    { "id": 1, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99, "valorTotal": 4589.99 },
+    { "id": 2, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99, "valorTotal": 3999.99 },
+    { "id": 3, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99, "valorTotal": 3089.99 },
+    { "id": 4, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99, "valorTotal": 2589.99 }
   ],
   "slider": [
-    { "id": 1, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99 },
-    { "id": 2, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99 },
-    { "id": 3, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99 },
-    { "id": 4, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99 }
+    { "id": 1, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99, "valorTotal": 4589.99 },
+    { "id": 2, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99, "valorTotal": 3999.99 },
+    { "id": 3, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99, "valorTotal": 3089.99 },
+    { "id": 4, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99, "valorTotal": 2589.99 }
   ],
   "produtos": [
-    { "id": 1, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99 },
-    { "id": 2, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99 },
-    { "id": 3, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99 },
-    { "id": 4, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99 },
-    { "id": 5, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99 },
-    { "id": 6, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99 },
-    { "id": 7, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99 },
-    { "id": 8, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99 }
+    { "id": 1, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99, "valorTotal": 4589.99 },
+    { "id": 2, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99, "valorTotal": 3999.99 },
+    { "id": 3, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99, "valorTotal": 3089.99 },
+    { "id": 4, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99, "valorTotal": 2589.99 },
+    { "id": 5, "img": "assets/img/mac.png", "nome": "MacBook Air 2018", "descricao": "O mais novo Mac do mercado", "valor": 4589.99, "valorTotal": 4589.99 },
+    { "id": 6, "img": "assets/img/iphonex.png", "nome": "Apple Iphone X", "descricao": "O melhor da Apple", "valor": 3999.99, "valorTotal": 3999.99 },
+    { "id": 7, "img": "assets/img/galaxys9.png", "nome": "Samsung S9", "descricao": "Seu Smartphone com uma configuração extrema", "valor": 3089.99, "valorTotal": 3089.99 },
+    { "id": 8, "img": "assets/img/play4.png", "nome": "Play 4", "descricao": "Jogos incríveis. Entretenimento sem fim. Mais leve e mais fino.", "valor": 2589.99, "valorTotal": 2589.99 }
   ]
 }

@@ -58,3 +58,8 @@ th {
 .btn-finalizar:active {
     color: rgb(206, 206, 206);
 }
+
+.carrinho-vazio {
+    height: 40vh;
+    min-height: 400px;
+}
